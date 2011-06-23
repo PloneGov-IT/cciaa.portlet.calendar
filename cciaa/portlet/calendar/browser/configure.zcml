@@ -20,4 +20,10 @@
       permission="zope2.View"
       />
 
+ <browser:resourceDirectory
+      name="cciaa.portlet.calendar.styles"
+      directory="styles"
+      />
+
+
 </configure>

@@ -23,6 +23,7 @@
 		
 		<a href="#"
 			title="Events of the month"
+			class="monthSearch"
 			tal:define="month view/monthName;
 						monthNumber view/month;
 						datestart python:view.dateStart(monthNumber,year);
