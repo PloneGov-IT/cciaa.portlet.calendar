@@ -17,7 +17,7 @@ Changelog
 1.0.1
 -----
 
-* Fixed *search_events* thak break when parameters are missing [fdelia]
+* Fixed *search_events* that break when parameters are missing [fdelia]
 
 1.0.0
 -----
