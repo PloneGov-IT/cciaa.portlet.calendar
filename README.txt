@@ -45,13 +45,18 @@ the `PloneGov initiative`__.
 __ http://www.fe.camcom.it/
 __ http://www.plonegov.it/
 
+Updated to Plone 4.1 with the support of `Agencia Alagoas de Noticias`__;
+Agencia Alagoas supports the `PloneGovBr initiative`__.
+
+__ http://www.agenciaalagoas.al.gov.br/
+__ http://www.softwarelivre.gov.br/plone
+
 Authors
 =======
 
-This product was developed by RedTurtle Technology team.
+This product was developed by RedTurtle Technology team. Updated to Plone 4.1 by Imagem Empresarial team.
 
 .. image:: http://www.redturtle.it/redturtle_banner.png
    :alt: RedTurtle Technology Site
    :target: http://www.redturtle.it/
-
 
