@@ -1,11 +1,11 @@
 Changelog
 =========
 
-1.2.0 (Unreleased)
+1.2.0 (2011-06-27)
 ------------------
 
 * Updated to Plone 4.1 [davilima6]
-* Fixed some styles with Sunburst theme [keul]
+* Fixed some styles issues with Sunburst theme [keul]
 
 1.1.0 (2011-01-21)
 ------------------
