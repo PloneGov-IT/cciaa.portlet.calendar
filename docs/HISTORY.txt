@@ -1,6 +1,24 @@
 Changelog
 =========
 
+1.2.1 (Unreleased)
+------------------
+
+* Fixed a bug for missing ``syntool`` reference on Plone 4.1
+  (thanks to Michel for reporting this)
+  [keul]
+* Fixed a bug for a wrong variable definition in ``searchmonth.pt``
+  [keul]
+* Apply ``SearchableText`` query parameter to month search only if
+  really used in the calling request
+  [keul]
+* Changed the portlet edit permission to "plone.app.portlets.ManagePortlets".
+  This solve the problem of importing ``permissions.zcml`` and is a better
+  permission
+  [keul]
+* Pyflakes cleanup
+  [keul]
+
 1.2.0 (2011-06-27)
 ------------------
 

@@ -1,7 +1,6 @@
-from Products.CMFCore.utils import getToolByName
+# -*- coding: utf-8 -*-
 
 from Products.Five.browser import BrowserView
-
 
 class SearchEventsView(BrowserView):
 

@@ -36,7 +36,9 @@
     <span tal:content="eventyear" i18n:name="event_year" />
   </h1>
 
-  <p class="discreet" tal:condition="syntool/isSiteSyndicationAllowed">
+  <p class="discreet"
+     tal:define="syntool context/@@plone_tools/syndication"
+     tal:condition="syntool/isSiteSyndicationAllowed">
     <a href="" class="link-feed"
         tal:attributes="href string:${portal_url}/search_rss?${request/QUERY_STRING}"
         i18n:translate="title_rss_feed">
@@ -53,14 +55,14 @@
       tal:define="batch python:Batch(results, b_size, int(b_start), orphan=1);">
     <dl class="searchResults">
     <tal:results repeat="result batch">
-      <tal:entry
+      <tal:entry    
           define="result_url result/getURL;
                   result_type result/portal_type;
                   item_icon python:plone_view.getIcon(result);
                   result_view_url python:result_type in use_view_action
                                   and result_url + '/view'
                                   or result_url + '/';
-                  url python:'%s?searchterm=%s' % (result_view, searchterm)">
+                  url python:'%s%s' % (result_view_url, searchterm and '?searchterm=%s' % searchterm or '')">
         <dt tal:define="item_wf_state_class string:state-${result/review_state};
                         normalizeString nocall:context/@@plone/normalizeString"
             tal:attributes="class python:'contenttype-' + normalizeString(result.portal_type)">

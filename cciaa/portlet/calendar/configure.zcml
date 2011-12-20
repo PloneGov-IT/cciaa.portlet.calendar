@@ -22,7 +22,7 @@
          interface=".portletcalendariocamerale.IPortletCalendarioCamerale"
          assignment=".portletcalendariocamerale.Assignment"
          view_permission="zope2.View"
-         edit_permission="cmf.ManagePortal"
+         edit_permission="plone.app.portlets.ManagePortlets"
          renderer=".portletcalendariocamerale.Renderer"
          addview=".portletcalendariocamerale.AddForm"
          />
