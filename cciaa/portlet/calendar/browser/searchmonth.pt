@@ -36,9 +36,7 @@
     <span tal:content="eventyear" i18n:name="event_year" />
   </h1>
 
-  <p class="discreet"
-     tal:define="syntool context/@@plone_tools/syndication"
-     tal:condition="syntool/isSiteSyndicationAllowed">
+  <p class="discreet">
     <a href="" class="link-feed"
         tal:attributes="href string:${portal_url}/search_rss?${request/QUERY_STRING}"
         i18n:translate="title_rss_feed">

@@ -18,26 +18,23 @@
 <body>
 <div metal:fill-slot="main"
     tal:define="portal_url context/@@plone_portal_state/portal_url;
-                use_types_blacklist request/use_types_blacklist|python:True;
-                use_navigation_root request/use_navigation_root|python:True;
-                results python:here.queryCatalog(REQUEST=request,use_types_blacklist=use_types_blacklist, use_navigation_root=use_navigation_root);
+                results view/results;
                 Batch python:modules['Products.CMFPlone'].Batch;
                 b_size python:30;b_start python:0;b_start request/b_start | b_start;
                 desc_length site_properties/search_results_description_length;
                 desc_ellipsis site_properties/ellipsis;
                 searchterm request/SearchableText|nothing;
-                use_view_action site_properties/typesUseViewActionInListings|python:();">
+                use_view_action site_properties/typesUseViewActionInListings|python:();
+                toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
 
     <h1 class="documentFirstHeading" tal:condition="results">
       <span i18n:translate="cciaa_events_of_the_day">Events of the day</span>
-      <span tal:define="eventdate python:view.date(request)">
-        <span tal:content="eventdate">Event date</span>
+      <span tal:define="eventdate view/dateFromRequest">
+        <span tal:content="python:toLocalizedTime(eventdate)">Event date</span>
       </span>
     </h1>
 
-    <p class="discreet"
-        tal:define="syntool context/@@plone_tools/syndication"
-        tal:condition="python: syntool.isSiteSyndicationAllowed and results">
+    <p class="discreet">
       <a href="" class="link-feed"
           tal:attributes="href string:${portal_url}/search_rss?${request/QUERY_STRING}"
           i18n:translate="title_rss_feed">
@@ -50,16 +47,10 @@
     </div>
 
     <div tal:define="batch python:Batch(results, b_size, int(b_start), orphan=1);"
-        tal:condition="results">
+         tal:condition="results">
 
         <dl class="searchResults">
         <tal:results repeat="result batch">
-          <span tal:condition="python:len(results) == 1">
-            <tal:entry
-                define="result_url result/getURL"
-                content="python:view.singolEvent(result_url)"
-                />
-          </span>
           <tal:entry
               define="result_url result/getURL;
                       result_type result/portal_type;

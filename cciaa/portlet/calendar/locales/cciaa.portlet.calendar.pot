@@ -3,8 +3,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: cciaa.portlet.calendar\n"
-"POT-Creation-Date: 2011-01-19 08:45+0000\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-11-20 14:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,57 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: cciaa.portlet.calendar\n"
 
-#: ../portletcalendariocamerale.pt:25
+msgid "A calendar portlet with some more search options"
+msgstr ""
+
+msgid "CCIAA Searching Calendar"
+msgstr ""
+
+#: ./portletcalendariocamerale.pt:24
 msgid "Events of the month"
 msgstr ""
 
-#: ../portletcalendariocamerale.py:33
+#: ./portletcalendariocamerale.py:33
 msgid "Searching Calendar"
 msgstr ""
 
 #. Default: "last modified"
-#: ../browser/searchevents.pt:104
-#: ../browser/searchmonth.pt:95
+#: ./browser/searchevents.pt:96
+#: ./browser/searchmonth.pt:91
 msgid "box_last_modified"
 msgstr ""
 
 #. Default: "Event of ${event_month} ${event_year}"
-#: ../browser/searchmonth.pt:37
+#: ./browser/searchmonth.pt:36
 msgid "cciaa_events_month"
 msgstr ""
 
 #. Default: "Events of the day"
-#: ../browser/searchevents.pt:34
+#: ./browser/searchevents.pt:32
 msgid "cciaa_events_of_the_day"
 msgstr ""
 
 #. Default: "No events were found."
-#: ../browser/searchevents.pt:53
-#: ../browser/searchmonth.pt:50
+#: ./browser/searchevents.pt:48
+#: ./browser/searchmonth.pt:49
 msgid "description_no_results_found"
 msgstr ""
 
 #. Default: "by ${author}"
-#: ../browser/searchevents.pt:92
-#: ../browser/searchmonth.pt:83
+#: ./browser/searchevents.pt:89
+#: ./browser/searchmonth.pt:84
 msgid "label_by_author"
 msgstr ""
 
 #. Default: "filed under:"
-#: ../browser/searchevents.pt:116
-#: ../browser/searchmonth.pt:107
+#: ./browser/searchevents.pt:105
+#: ./browser/searchmonth.pt:101
 msgid "label_filed_under"
 msgstr ""
 
 #. Default: "Subscribe to an always-updated feed of these search for events"
-#: ../browser/searchevents.pt:44
-#: ../browser/searchmonth.pt:42
+#: ./browser/searchevents.pt:41
+#: ./browser/searchmonth.pt:42
 msgid "title_rss_feed"
 msgstr ""
 

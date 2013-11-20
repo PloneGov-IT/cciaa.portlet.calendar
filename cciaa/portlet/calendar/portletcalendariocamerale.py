@@ -33,12 +33,6 @@ class Assignment(CameraleAssignment):
         return _(u"Searching Calendar")
 
 class Renderer(CameraleRenderer):
-    """Portlet renderer.
-
-    This is registered in configure.zcml. The referenced page template is
-    rendered, and the implicit variable 'view' will refer to an instance
-    of this class. Other methods can be added and referenced in the template.
-    """
     _template = ViewPageTemplateFile('portletcalendariocamerale.pt')
     updated = False
 
@@ -61,12 +55,6 @@ class Renderer(CameraleRenderer):
         return dateE
 
 class AddForm(CameraleAddForm):
-    """Portlet add form.
-
-    This is registered in configure.zcml. The form_fields variable tells
-    zope.formlib which fields to display. The create() method actually
-    constructs the assignment that is being added.
-    """
     form_fields = form.Fields(IPortletCalendarioCamerale)
 
     def create(self):
